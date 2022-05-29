@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro-Sys</title>
+    <!-- C S S -->
+    <link rel="styleSheet" type="text/css" href="./style/header.css">
+    <link rel="styleSheet" type="text/css" href="./style/global.css">
+    <link rel="styleSheet" type="text/css" href="./style/main.css">
+</head>
+<body>
+    <header>
+        <h2>Cadastre seu Produto</h2>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <input type="text" id="nome" name="nome" placeholder="Nome do produto" required></input>
+                <input type="number" id="valor" name="Valor" placeholder="Valor" required></input>
+            </div>
+            <div>
+                <input type="number" id="cdg" name="cdg" placeholder="Código do produto" required></input> 
+                <input type="number" id="qnt" name="qnt" placeholder="Qnt." required></input> 
+            </div>
+            <button id='butao'  onclick="salvandoDados()">Cadastrar</button>
+        </form>
+    </main>
+    <section id="produtosCadastrados">
+
+    </section>
+</body>
+</html>
