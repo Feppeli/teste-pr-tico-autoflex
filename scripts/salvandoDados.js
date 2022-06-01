@@ -3,6 +3,27 @@ var produtoValor = document.querySelector('#valor')
 var produtoCdg = document.querySelector('#cdg')
 var produtoQnt = document.querySelector('#qnt')
 
+
+
+
+function recuperandoDados() {
+    var objetos = Object.values(localStorage)
+    console.log(objetos)
+
+    var productObject = objetos.map(function(key){
+        return JSON.parse(key)
+    })
+    console.log(productObject)
+    console.log(productObject)
+    productObject.map(function (key) {
+        document.querySelector('#produtosCadastrados').innerHTML += "<div id='produto' style='background: red'>" + "<p>" + key.nome + "</p>" + "</div>"
+    })
+    
+
+}
+recuperandoDados()
+
+
 // função salvando dados
 function salvandoDados(nome, valor, cdg, qnt) {
 
@@ -30,27 +51,60 @@ function salvandoDados(nome, valor, cdg, qnt) {
     localStorage.setItem(gerarId, jsonProdutos)
     alert('Produto registrado')
 
+
+
+
+    /*
+    //Apagando ementos
+    const deletarProdutos = document.querySelector('#produto')
+    if(deletarProdutos){
+        deletarProdutos.parentNode.removeChild(deletarProdutos)
+    }else{
+        console.log('produtos não encontrados')
+    }*/
+
+
+
+
+
+
+
+
+    /*
+
     //recuperando os dados
     var objetos = Object.values(localStorage)
     console.log(objetos)
 
     // Inserindo os dados na tela
-    objetos.map(function(produto){
-        document.body.innerHTML += "<div style='background: red'>" + "<p>" + produto.nome + "</p>" + "</div>"
+    objetos.map(function (produto) {
+        document.querySelector('#produtosCadastrados').innerHTML += "<div id='produto' style='background: red'>" + "<p>" + produto.nome + "</p>" + "</div>"
     })
+
+
+
+    */
+
+
+
+
+
+
 
     /*
     // transoformando os dados em array
     var conteudo = Object.keys(objetos).map(function (key) {
        // return [Number(key), objetos[key]]
-
+ 
        return [objetos[key]]
     });
     console.log(conteudo)
-    */
+    
+}*/
+
+location.reload()
+
+
 
 }
-
-
-
 
