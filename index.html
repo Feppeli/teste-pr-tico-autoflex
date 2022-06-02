@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
     <link rel="styleSheet" type="text/css" href="./style/header.css">
     <link rel="styleSheet" type="text/css" href="./style/global.css">
     <link rel="styleSheet" type="text/css" href="./style/main.css">
+    <link rel="styleSheet" type="text/css" href="./style/elemento.css">
 </head>
+
 <body>
     <header>
         <h2>Cadastre seu Produto</h2>
@@ -22,16 +25,17 @@
                 <input type="number" id="valor" name="Valor" placeholder="Valor" required></input>
             </div>
             <div>
-                <input type="number" id="cdg" name="cdg" placeholder="Código do produto" required></input> 
-                <input type="number" id="qnt" name="qnt" placeholder="Qnt." required></input> 
+                <input type="number" id="cdg" name="cdg" placeholder="Código do produto" required></input>
+                <input type="number" id="qnt" name="qnt" placeholder="Qnt." required></input>
             </div>
-            <button id='butao'  onclick="salvandoDados()">Cadastrar</button>
+            <button id='butao' onclick="salvandoDados()">Cadastrar</button>
         </form>
     </main>
-    <section id="produtosCadastrados">
+    <!-- SEÇÃO QUE É GUARDADO OS PRODUTOS -->
+    <section id="produtosCadastrados"></section>
 
-    </section>
-    <script src="./scripts/salvandoDados.js"></script>
-    <script src="./scripts/recuperandoDados.js"></script>
+
+    <script src="./scripts/index.js"></script>
 </body>
+
 </html>

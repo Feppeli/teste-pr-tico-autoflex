@@ -1,0 +1,24 @@
+#produtosCadastrados{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+.elemento{
+    background: #6c6c6c;
+    height: 130px;
+    width: 300px;
+    border-radius: 5px;
+
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.elemento h4, h3{
+    color: #fff;
+    margin-left: 10px;
+}

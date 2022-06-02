@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background: #1f1f1f;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
