@@ -24,6 +24,8 @@ main input{
     color: #fff;
     padding: 10px;
     margin: 4px;
+
+    font-family: 'Montserrat', sans-serif;
 }
 main #nome{
     width: 184px;
@@ -54,4 +56,5 @@ button{
     height: 50px;
     font-size: 15px;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
