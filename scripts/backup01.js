@@ -1,65 +1,64 @@
+// função salvando dados
+function salvandoDados(nome, valor, cdg, qnt) {
 
-// função salvando dados 
-function salvandoDados() {
-    var produtoNome = document.querySelector('#nome')
-    var produtoValor = document.querySelector('#valor')
-    var produtoCdg = document.querySelector('#cdg')
-    var produtoQnt = document.querySelector('#qnt')
+    // separando os valores do formulário
+    var nome = produtoNome.value
+    var valor = produtoValor.value
+    var cdg = produtoCdg.value
+    var qnt = produtoQnt.value
 
-    // separando os valores do formulário 
-    let nome = produtoNome.value
-    let valor = produtoValor.value
-    let cdg = produtoCdg.value
-    let qnt = produtoQnt.value
-
-    // criando um objeto com os valores 
-    let auxJsonProdutos = {
+    // criando um objeto com os valores
+    var auxJsonProdutos = {
         nome: nome,
         valor: valor,
         codigo: cdg,
         quantidade: qnt
     }
 
-    // Transformando o objeto em JSON 
-    let jsonProdutos = JSON.stringify(auxJsonProdutos)
+    // Transformando o objeto em JSON
+    var jsonProdutos = JSON.stringify(auxJsonProdutos)
 
-    // Gerando ID dinamico 
-    let gerarId = localStorage.length + 1;
+    // Gerando ID dinamico
+    var gerarId = localStorage.length + 1;
 
-    // Setando os itens dentro do localstorage 
+    // Setando os itens dentro do localstorage
     localStorage.setItem(gerarId, jsonProdutos)
     alert('Produto registrado')
 
 
 
-    console.log(Object.values(localStorage))
 
-    //recuperando os dados 
-    let objetos = Object.values(localStorage)
-    listItem(gerarId)
-
-    // Inserindo os dados na tela 
-
-    // transoformando os dados em array 
-    var conteudo = Object.keys(objetos).map(function (key) { 
-          // return [Number(key), objetos[key]] 
-    
-          return [objetos[key]] 
-       }); 
-       console.log(JSON.parse(conteudo)) 
+    /*
+    //Apagando ementos
+    const deletarProdutos = document.querySelector('#produto')
+    if(deletarProdutos){
+        deletarProdutos.parentNode.removeChild(deletarProdutos)
+    }else{
+        console.log('produtos não encontrados')
+    }*/
 
 
+    /*
+
+    //recuperando os dados
+    var objetos = Object.values(localStorage)
+    console.log(objetos)
+
+    // Inserindo os dados na tela
+    objetos.map(function (produto) {
+        document.querySelector('#produtosCadastrados').innerHTML += "<div id='produto' style='background: red'>" + "<p>" + produto.nome + "</p>" + "</div>"
+    })
+    */
+
+
+    /*
+    // transoformando os dados em array
+    var conteudo = Object.keys(objetos).map(function (key) {
+       // return [Number(key), objetos[key]]
+ 
+       return [objetos[key]]
+    });
+    console.log(conteudo)
+}*/
+    location.reload()
 }
-
-
-/*
-function listItem(key) {
-    console.log(key, JSON.parse(localStorage.getItem(key)))
-    let productObject = JSON.parse(localStorage.getItem(key)) // transformando o localStorage em arquivo json
-
-    console.log(productObject.nome)
-    document.body.innerHTML += `<div><p>${productObject.nome}</p>
-    <p>${productObject.valor}</p>
-    </div>`
-}
-*/
